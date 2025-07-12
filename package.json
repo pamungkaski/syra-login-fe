@@ -1,0 +1,44 @@
+{
+  "name": "syra-login-fe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack -p 8080",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@aztec/bb.js": "0.84.0",
+    "@iarna/toml": "^2.2.5",
+    "@noble/curves": "^1.9.0",
+    "@noble/hashes": "^1.8.0",
+    "@noble/secp256k1": "^2.2.3",
+    "@noir-lang/noir_js": "1.0.0-beta.6",
+    "@react-oauth/google": "^0.12.1",
+    "@zk-email/jwt-tx-builder-helpers": "^0.1.0",
+    "blakejs": "^1.2.1",
+    "buffer": "^6",
+    "idb-keyval": "^6.2.1",
+    "jwt-decode": "^4.0.0",
+    "next": "15.3.1",
+    "noir-jwt": "^0.4.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "webpack": "^5.99.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/node-rsa": "^1.1.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/snarkjs": "^0.7.9",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "snarkjs": "^0.7.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

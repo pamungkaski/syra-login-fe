@@ -1,0 +1,6 @@
+[package]
+name = "shamir_secret_sharing"
+type = "lib"
+authors = [""]
+
+[dependencies]

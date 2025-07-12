@@ -1,0 +1,9 @@
+[package]
+name = "syra_login"
+type = "bin"
+authors = [""]
+
+[dependencies]
+id_token = { path = "./id_token" }
+shamir_secret_sharing = { path = "./shamir_secret_sharing" }
+big_curve = { tag = "v0.9.0", git = "https://github.com/noir-lang/noir_bigcurve" }
