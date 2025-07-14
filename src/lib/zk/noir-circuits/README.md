@@ -48,7 +48,7 @@ nargo compile  # outputs target/...
 
 # 2. Generate proving and verification keys (Groth16)
 #    Note: --protocol can be changed to plonk if supported
-nargo setup --protocol groth16
+nargo setup
 
 # 3. Create a witness file (input.json → witness.tr)
 #    You can generate the JSON from the FE helper "buildCircuitInput()"
