@@ -4,10 +4,10 @@
 
 SyRA Login FE is a Next.js 15 client that turns a regular Google sign‑in into a zero‑knowledge, SyRA‑compatible authentication flow for blockchain dApps. It demonstrates how to:
 
-- Prove selected JWT claims (e.g. `sub`) in zero knowledge with Noir circuits.
-- Mint SyRA user keys after a cryptographic attest by an admin service.
-- Produce a final verifier proof that binds the JWT, Google’s JWK and your keys.
-- Sign arbitrary messages with a SyRA zk‑signature and verify it locally.
+* Prove selected JWT claims (e.g. `sub`) in zero knowledge with Noir circuits.
+* Mint SyRA user keys after a cryptographic attest by an admin service.
+* Produce a final verifier proof that binds the JWT, Google’s JWK and your keys.
+* Sign arbitrary messages with a SyRA zk‑signature and verify it locally.
 
 ## Live demo
 
@@ -49,6 +49,16 @@ npm start       # Start production server (3000)
 npm run lint    # ESLint
 ```
 
+## Downloading Proving Key
+
+```bash
+# Make the script executable (one‑time)
+chmod +x download_proving_key.sh
+
+# Fetch the files into ./public/
+./download_proving_key.sh
+```
+
 ## Usage flow
 
 1. **Google sign‑in** – `GoogleLoginButton` stores the raw ID token and generates an ephemeral secp256k1 keypair.
@@ -72,7 +82,8 @@ src/
 ```
 
 ## Backend requirements
-https://github.com/pamungkaski/syra-login-rs
+
+[https://github.com/pamungkaski/syra-login-rs](https://github.com/pamungkaski/syra-login-rs)
 
 This front‑end expects an admin service exposing:
 
@@ -107,4 +118,3 @@ PRs and issues are welcome! Please open an issue first to discuss major changes.
 ## License
 
 Distributed without an explicit license. See `LICENSE` if one is later added.
-
