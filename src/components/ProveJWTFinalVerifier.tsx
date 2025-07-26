@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { proveGoogleJWTFinalVerifier, FinialVerifierJWTProof } from '@/lib/zk/final_verifier_jwt_proof'
 import {GoogleJWTProofResult} from "@/lib/zk/jwt";
+import {Verify} from "node:crypto";
 
 const TOKEN_KEY         = 'idToken'
 const INTERMEDIATE_KEY  = 'jwtProof'        // your first proof with .publicKey & .claims
