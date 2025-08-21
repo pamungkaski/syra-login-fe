@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack -p 8080",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@aztec/bb.js": "0.84.0",

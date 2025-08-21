@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------
 import { randomBytes } from 'crypto';
 import { Noir }        from '@noir-lang/noir_js';
-import { UltraHonkBackend } from '@aztec/bb.js';
+import { UltraHonkBackend, ProofData } from '@aztec/bb.js';
 import TOML from '@iarna/toml';
 
 import circuit           from './noir-circuits/target/syra_login.json';
@@ -39,7 +39,7 @@ const toNoirPoint = (pt: { x: bigint; y: bigint; infinity: boolean }) => ({
 //  main API
 // ------------------------------------------------------------------
 export interface FinialVerifierJWTProof {
-    proof:   any;
+    proof:   ProofData;
     witness: any;
     g3: Point,
     g4: Point,
@@ -98,4 +98,11 @@ export async function proveGoogleJWTFinalVerifier(
     const proof       = await backend.generateProof(witness);
 
     return { proof, witness, g3, g4, r, bridge };
+}
+
+export async function Verify(proof: ProofData): Promise<boolean> {
+    const backend = new UltraHonkBackend(circuit.bytecode);
+    const isValid = await backend.verifyProof(proof);
+
+    return isValid;
 }

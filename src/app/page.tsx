@@ -4,6 +4,7 @@ import ProveJWTButton from '@/components/ProveJWTButton'
 import ProveJWTFinalVerifier from '@/components/ProveJWTFinalVerifier'
 import GenerateUserKeysButton from '@/components/GenerateUserKeysButton'
 import SyraSection from '@/components/SyraSection'
+import VerifyJWTFinalVerifier from "@/components/VerifyFinalJWTVerifier";
 
 export default function FeatureAuth() {
     return (
@@ -26,10 +27,12 @@ export default function FeatureAuth() {
             <section className="min-h-screen flex flex-col items-center justify-center p-6">
                 <h2 className="text-xl font-semibold mb-4">SNARK Proof of JWT for Final Verifier</h2>
                 <ProveJWTFinalVerifier />
+                <br/>
+                <VerifyJWTFinalVerifier />
             </section>
 
             <section className="min-h-screen flex flex-col items-center justify-center p-6">
-                <h2 className="text-xl font-semibold mb-4">Generate User Keys</h2>
+                <h2 className="text-xl font-semibold mb-4">Sign SyRA Signature</h2>
                 <SyraSection />
             </section>
         </>
