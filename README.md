@@ -1,5 +1,7 @@
 # SyRA Login Front‑End
 
+Implementing: [SyRA: Sybil-Resilient Anonymous Signatures with Applications to Decentralized Identity](https://eprint.iacr.org/2024/379) with OAuth
+
 **Privacy‑Preserving, Sybil‑Resilient OAuth 2.0 Authentication**
 
 SyRA Login FE is a Next.js 15 client that turns a regular Google sign‑in into a zero‑knowledge, SyRA‑compatible authentication flow for blockchain dApps. It demonstrates how to:
